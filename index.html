@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div>
+        <h1>Bad Ball Stump Game</h1>
+        <button onclick="
+            let computerChoice = computerMove();
+            
+            let resultMsg;
+            if (computerChoice === 'Bat') {
+                resultMsg = `It's a tie`;
+            } else if (computerChoice === 'Ball') {
+                resultMsg = 'User has won';
+            } else if (computerChoice === 'Stump') {
+                resultMsg = 'Computer has won';
+            }
+            
+            alert(`You have chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`)">Bat
+        </button>
+        <button onclick="
+            computerChoice = computerMove();
+            if (computerChoice === 'Bat') {
+                resultMsg = 'Computer has won';
+            } else if (computerChoice === 'Ball') {
+                resultMsg = `It's a tie`;
+            } else if (computerChoice === 'Stump') {
+                resultMsg = 'User has won';
+            }
+            
+            alert(`You have chosen Ball. Computer choice is ${computerChoice} and ${resultMsg}`)">Ball
+        </button>
+        <button onclick="
+            computerChoice = computerMove();
+            if (computerChoice === 'Bat') {
+                resultMsg = 'User has won';
+            } else if (computerChoice === 'Ball') {
+                resultMsg = 'Computer has won';
+            } else if (computerChoice === 'Stump') {
+                resultMsg = `It's a tie`;
+            }
+            
+            alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`)">stump
+        </button>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
