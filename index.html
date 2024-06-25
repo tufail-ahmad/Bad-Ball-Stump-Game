@@ -12,42 +12,19 @@
     <div>
         <h1>Bad Ball Stump Game</h1>
         <button onclick="
-            let computerChoice = computerMove();
-            
-            let resultMsg;
-            if (computerChoice === 'Bat') {
-                resultMsg = `It's a tie`;
-            } else if (computerChoice === 'Ball') {
-                resultMsg = 'User has won';
-            } else if (computerChoice === 'Stump') {
-                resultMsg = 'Computer has won';
-            }
-            
-            alert(`You have chosen Bat. Computer choice is ${computerChoice} and ${resultMsg}`)">Bat
+            let computerChoice = computerMove(); 
+            let resultMsg = getResult(computerChoice, 'Bat');
+            let result = showResult('Bat', computerChoice, resultMsg);">Bat
         </button>
         <button onclick="
             computerChoice = computerMove();
-            if (computerChoice === 'Bat') {
-                resultMsg = 'Computer has won';
-            } else if (computerChoice === 'Ball') {
-                resultMsg = `It's a tie`;
-            } else if (computerChoice === 'Stump') {
-                resultMsg = 'User has won';
-            }
-            
-            alert(`You have chosen Ball. Computer choice is ${computerChoice} and ${resultMsg}`)">Ball
+            resultMsg = getResult(computerChoice, 'Ball');
+            result = showResult('Ball', computerChoice, resultMsg);">Ball
         </button>
         <button onclick="
             computerChoice = computerMove();
-            if (computerChoice === 'Bat') {
-                resultMsg = 'User has won';
-            } else if (computerChoice === 'Ball') {
-                resultMsg = 'Computer has won';
-            } else if (computerChoice === 'Stump') {
-                resultMsg = `It's a tie`;
-            }
-            
-            alert(`You have chosen Stump. Computer choice is ${computerChoice} and ${resultMsg}`)">stump
+            resultMsg = getResult(computerChoice, 'Stump');
+            result = showResult('Stump', computerChoice, resultMsg);">Stump
         </button>
     </div>
     <script src="script.js"></script>
